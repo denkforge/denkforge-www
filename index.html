@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denkforge — The Semantic Knowledge Layer for AI Agents</title>
+  <meta name="description" content="Denkforge is the encrypted semantic knowledge layer for AI agents. Formal ontologies, not embeddings. Think. Forge. Own.">
+  <meta property="og:title" content="Denkforge">
+  <meta property="og:description" content="The semantic knowledge layer for AI agents. Think. Forge. Own.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://denkforge.com">
+  <script src="https://getlaunchlist.com/js/widget.js" defer></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x2666;</text></svg>">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0c;
+      --surface: #12121a;
+      --border: #1e1e2e;
+      --text: #e4e4ed;
+      --text-dim: #7a7a8e;
+      --accent: #c9a04e;
+      --accent-glow: rgba(201, 160, 78, 0.15);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    /* Subtle radial glow behind the logo */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      text-align: center;
+    }
+
+    /* Logo mark */
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border: 2px solid var(--accent);
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .wordmark {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .wordmark span {
+      color: var(--accent);
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .description {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text-dim);
+      margin-bottom: 3rem;
+    }
+
+    .description strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* Divider */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--border);
+      margin: 0 auto 2.5rem;
+    }
+
+    /* CTA / contact */
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+      margin-bottom: 3rem;
+    }
+
+    .cta:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .cta svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Social links */
+    .social {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s ease;
+    }
+
+    .social a:hover {
+      color: var(--accent);
+    }
+
+    /* Footer */
+    .early-access {
+      font-size: 0.95rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .launchlist-widget {
+      margin-bottom: 3rem;
+    }
+
+    .tm {
+      font-size: 0.35em;
+      color: var(--text-dim);
+      vertical-align: super;
+      margin-left: 0.05em;
+      font-weight: 400;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 2rem;
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      z-index: 1;
+    }
+
+    @media (max-width: 480px) {
+      .wordmark { font-size: 2.2rem; }
+      .description { font-size: 1.05rem; }
+      .tagline { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="wordmark">Denk<span>forge</span><sup class="tm">&trade;</sup></h1>
+    <p class="tagline">Think. Forge. Own.</p>
+
+    <p class="description">
+      <strong>Own the enterprise knowledge layer for your AI agents.</strong><br>
+      Switch models, switch providers, switch clouds — your knowledge stays with you.
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="early-access">Early access coming soon</p>
+
+    <div class="launchlist-widget" data-key-id="fFzOIK" data-height="180px"></div>
+
+    <div class="social">
+      <a href="https://github.com/denkforge">GitHub</a>
+      <a href="https://linkedin.com/company/denkforge">LinkedIn</a>
+      <a href="https://denkforge.bsky.social">Bluesky</a>
+      <a href="https://x.com/denkforgeai">X</a>
+      <a href="https://youtube.com/@denkforge">YouTube</a>
+    </div>
+  </div>
+
+  <div class="footer">&copy; 2026 Denkforge, Inc. Denkforge&trade; is a trademark of Denkforge, Inc.</div>
+
+</body>
+</html>
